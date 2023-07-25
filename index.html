@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Добавляем товар</h1>
+    <form action="server.php" method="post">
+      <label>
+        Производитель:
+        <input type="text" id="manufacturer" required>
+      </label>
+      <label>
+        Наименование:
+        <input type="text" id="name" required>
+      </label>
+      <label>
+        Цена:
+        <input type="number" id="price" required>
+      </label>
+      <label>
+        Количество:
+        <input type="number" id="quantity" required>
+      </label>
+      <button type="submit">Добавить</button>
+    </form>
+    
+    <table id="table">
+      <thead>
+        <tr>
+          <th data-column="manufacturer">Производитель</th>
+          <th data-column="name">Наименование</th>
+          <th data-column="price">Цена</th>
+          <th data-column="quantity">Количество</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td data-column="price"></td>
+          <td data-column="quantity"></td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
